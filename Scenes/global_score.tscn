@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://du8upafvmjxdl"]
+
+[ext_resource type="Script" uid="uid://bhq1ghsmnbcph" path="res://Scenes/global_score.gd" id="1_flhym"]
+[ext_resource type="AudioStream" uid="uid://duxqmm0wtabc" path="res://audio/HAPPY.mp3" id="2_mxe3e"]
+
+[node name="GlobalScore" type="Node" unique_id=413352384]
+script = ExtResource("1_flhym")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=892807894]
+stream = ExtResource("2_mxe3e")
+autoplay = true
+parameters/looping = true

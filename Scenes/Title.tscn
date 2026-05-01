@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://bg46h5x2n6eev"]
+
+[ext_resource type="Script" uid="uid://cxc444kjs454y" path="res://Scenes/title.gd" id="1_6khh7"]
+[ext_resource type="FontFile" uid="uid://dr201ov4c76pb" path="res://fonts/Crackman.otf" id="1_tochr"]
+[ext_resource type="Texture2D" uid="uid://c4q6c7mxqh78h" path="res://graphics/player/player_tileset.png" id="2_phf2g"]
+[ext_resource type="FontFile" uid="uid://hqpa84d2dqvp" path="res://fonts/Better VCR 9.0.1.ttf" id="4_bwrlp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6khh7"]
+atlas = ExtResource("2_phf2g")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwrlp"]
+atlas = ExtResource("2_phf2g")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84h87"]
+atlas = ExtResource("2_phf2g")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_71b5n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6khh7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwrlp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6khh7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84h87")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Title" type="Control" unique_id=1099673096]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6khh7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1328476914]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.33333334, 0.02745098, 0.63529414, 1)
+
+[node name="Label" type="Label" parent="." unique_id=324202123]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -469.0
+offset_top = -250.0
+offset_right = 469.0
+offset_bottom = 84.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_tochr")
+theme_override_font_sizes/font_size = 140
+text = "PASS THE WAY"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=65502227]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect" unique_id=1057747309]
+position = Vector2(0.99999994, -0.99999994)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_71b5n")
+
+[node name="Score" type="Label" parent="." unique_id=1522603766]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = 289.0
+offset_right = 94.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_bwrlp")
+theme_override_font_sizes/font_size = 25
+text = "Score: 0"
+
+[node name="Comfirm" type="Label" parent="." unique_id=941126108]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -167.0
+offset_top = 245.0
+offset_right = 172.0
+offset_bottom = 278.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_bwrlp")
+theme_override_font_sizes/font_size = 25
+text = "Presse Space Start"
