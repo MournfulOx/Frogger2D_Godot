@@ -9,7 +9,7 @@ Feel free to use, fork, or modify it however you like.
 
 ## Gameplay
 
-Guide the frog across a busy road without getting hit by cars.  
+Guide a student across a busy road without getting hit by cars.  
 Your score is the time (in seconds) it takes to reach the finish line — **lower is better**.  
 The best score is saved and displayed on the title screen.
 
